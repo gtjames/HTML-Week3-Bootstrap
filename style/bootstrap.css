@@ -1,0 +1,41 @@
+body {
+  //  background: url("../images/Butterfly Opera House.jpg") top / cover repeat fixed;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+table {
+  border-color: red;
+  border-style: solid;
+   border-collapse: collapse;
+}
+
+td {
+  border: 1px solid green;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+
+figure.before {
+  background: url("../images/antique.jpg");
+}
+
+figure.after {
+  background: url("../images/shiny.jpg");
+}
+
+#wrapper {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  height: 32px;
+}

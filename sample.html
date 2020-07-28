@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Let's do everything once</title>
+  <link rel="stylesheet" href="style/bootstrap.css">
+  <style media="screen">
+    body {
+      background: url("images/Butterfly Opera House.jpg") top / cover repeat fixed;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="" action="Confirm.html" method="get">
+    <fieldset>
+      <table>
+        <tr>
+          <td>
+            <label for="name">Student</label>
+          </td>
+          <td>
+            <input type="text" id='student' name="name" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="homeTown">Home Town</label>
+          </td>
+          <td>
+            <input type="text" id='homeTown' name="homeTown" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="major">Major</label>
+          </td>
+          <td>
+            <select class="" id='major' name="major">
+            <option value="CS">Computer Science</option>
+            <option value="Dance">Dance</option>
+            <option value="Art">Art</option>
+            <option value="Chem">Chemistry</option>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="yearInSchool">Year In School</label>
+          </td>
+          <td>
+            <input type="radio" name="yearInSchool" id="rbSr" value="Sr" />Senior
+            <input type="radio" name="yearInSchool" id="rbJr" value="Jr" />Junior
+            <input type="radio" name="yearInSchool" id="rbSoph" value="Soph" />Sophmore
+            <input type="radio" name="yearInSchool" id="rbFr" value="Fr" />Freshman
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="picture">Student Picture</label>
+          </td>
+          <td>
+            <input type="file" name="picture" id="picture" />
+          </td>
+          <tr>
+          </tr>
+          <td colspan="2">
+            <div id="wrapper">
+              <button type="submit">Add Student</button>
+            </div>
+          </td>
+        </tr>
+      </tr>
+      <td colspan="2">
+        <div id="wrapper">
+          <button type="button" onClick='testFields()'>What's the Major</button>
+        </div>
+      </td>
+    </tr>
+      </table>
+    </fieldset>
+  </form>
+  <script type="text/javascript">
+    console.log("Hello World!")
+    function testFields() {
+      let student = document.getElementById('student');
+      let home = document.getElementById('homeTown');
+      if (student.value == '') {
+        student.style;
+      }
+    }
+  </script>
+</body>
+
+</html>

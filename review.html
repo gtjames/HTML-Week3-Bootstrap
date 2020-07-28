@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px dashed #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a href="#about">About</a></li>
+    </ul>
+    <form id='register' action='' onsubmit='return false;'>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id='name'>
+                </td>
+                <td>
+                    <span id='nameError' class='error'></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td>
+                    <select name="state" id="state">
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="OK">Oklahoma</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">eMail:</label></td>
+                <td><input type="email" name="email" id='email'></td>
+                <td><span id='emailError' class='error'></span></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" name="age" id='age'></td>
+                <td><span id='ageError' class='error'></span></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="male"> Male
+                </td>
+                <td>
+                    <span id='genderError' class='error'></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="subscribe">Subscribe to:</label></td>
+                <td>
+                    <input type="checkbox" name="java" value="true"> Java
+                    <input type="checkbox" name="c#" value="true"> C#
+                    <input type="checkbox" name="javascript" value="true"> JavaScript
+                </td>
+            </tr>
+        </table>
+
+        <input id='submit' type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("register").addEventListener("submit",
+            formValidate);
+
+        function formValidate() {
+            //  gather all the data from the web page
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let state = document.getElementById("state").value;
+
+            let gender = document.getElementsByName("gender");
+
+            //  get the reference to the error fields
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let ageError = document.getElementById("ageError");
+
+            //  validate the name -- make sure a name was entered
+            if (name.length == 0) {
+                nameError.innerHTML = "Enter Name";
+            } else {
+                nameError.innerHTML = "";
+            }
+
+            if (age.length == 0) {
+                ageError.innerHTML = "Enter an age between 18 and 35";
+            } else if (age < 18) {
+                ageError.innerHTML = "Enter an age greater than 18";
+            } else if (age > 35) {
+                ageError.innerHTML = "Enter an age less than 35";
+            } else {
+                ageError.innerHTML = "";
+            }
+
+            if (email.length == 0) {
+                emailError.innerHTML = "Enter Email Address";
+            } else {
+                emailError.innerHTML = "";
+            }
+
+            var gender1 = gender[0];
+            var gender2 = gender[1];
+            if (gender1.checked == false && gender2.checked == false) {
+                genderError.innerHTML = "Gender not selected";
+            } else {
+                genderError.innerHTML = "";
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+    body {
+        background-color: #0e43b6;
+        color: black;
+        margin: 0px;
+    }
+
+    h1 {
+        font-family: 'Adelle W01 Bold';
+    }
+
+    header {
+        border: 5px double #0d1d3f;
+        background-color: #4b7adf;
+        color: white;
+        position: fixed;
+        margin: 0px;
+        top: 0px;
+        width: 100%;
+    }
+
+    footer {
+        border: 5px double #0d1d3f;
+        background-color: #4b7adf;
+        padding: 10px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    img {
+        transition: .5s;
+    }
+
+    img:hover, .shrink {
+        border-radius: 50%;
+        border: 2px solid black;
+        transition: 2s;
+        transition-delay: 2s;
+    }
+
+    strong {
+        color: yellow;
+    }
+
+    section {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    .navbar-nav a {
+        color: white;
+    }
+
+    .navbar-nav li>a:hover {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+    }
+
+    .banner {
+        width: 20%;
+        height: 10%
+    }
+
+    .quote {
+        width: 35%;
+    }
+
+    .center-in-container {
+        margin: auto;
+    }
+
+    .test1 {
+        background-color: red;
+        color: white;
+    }
+
+    .test2 {
+        background-color: white;
+        color: blue;
+    }
+
+    .test3 {
+        background-color: blue;
+        color: yellow;
+    }

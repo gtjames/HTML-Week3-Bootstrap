@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style media="screen">
+    .panel{
+      margin: 20px;
+    }
+  </style>
+  <title>Bootstrap Forms</title>
+</head>
+
+<body>
+  <form class="form-horizontal" action="index.html" method="post">
+    <fieldset>
+      <legend>Checkout</legend>
+      <div class="form-group">
+        <label for="txtName" class="control-label col-sm-1">Name</label>
+        <div class="col-sm-11">
+          <input type="text" class="form-control" id="txtName" placeholder="Name on Card">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="txtCardNumber" class="control-label col-sm-1"><i class="glyphicon glyphicon-user"></i></label>
+        <div class="col-sm-11">
+          <input type="text" class="form-control" id="txtCardNumber" placeholder="0000-0000-0000-0000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="txtExpireMonth" class="control-label col-sm-1">exp</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="txtExpireMonth" placeholder="MM">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="txtExpireYear" placeholder="YYYY">
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-11">
+        <button type="submit" class="btn btn-primary">Complete Purchase</button>
+      </div>
+    </fieldset>
+  </form>
+  <br><br>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Panel Heading - Checkout</div>
+    <div class="panel-body">Panel Body
+      <form class="form-horizontal" action="index.html" method="post">
+        <fieldset>
+          <legend>Checkout</legend>
+          <div class="form-group">
+            <label for="txtName" class="control-label col-sm-1">Name</label>
+            <div class="col-sm-11">
+              <input type="text" class="form-control" id="txtName" placeholder="Name on Card">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="txtCardNumber" class="control-label col-sm-1"><i class="glyphicon glyphicon-credit-card"></i></label>
+            <div class="col-sm-11">
+              <input type="text" class="form-control" id="txtCardNumber" placeholder="0000-0000-0000-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="txtExpireMonth" class="control-label col-sm-1">exp</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="txtExpireMonth" placeholder="MM">
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="txtExpireYear" placeholder="YYYY">
+            </div>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-11">
+            <button type="submit" class="btn btn-primary">Complete Purchase</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
